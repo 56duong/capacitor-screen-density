@@ -1,22 +1,21 @@
-package com.viethas.plugins.screendensity;
+package com.viethas.screendensity;
 
-import com.getcapacitor.JSObject;
-import com.getcapacitor.Plugin;
+import android.util.DisplayMetrics;
+import android.content.Context;
+
 import com.getcapacitor.PluginCall;
-import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
+import com.getcapacitor.Plugin;
 
 @CapacitorPlugin(name = "ScreenDensity")
 public class ScreenDensityPlugin extends Plugin {
 
-    private ScreenDensity implementation = new ScreenDensity();
-
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void getDensity(PluginCall call) {
+        Context context = getContext();
+        DisplayMetrics metrics = context.getResources().getDisplayMetrics();
+        float density = metrics.density;
 
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+        call.resolve(new JSObject().put("density", density));
     }
 }
