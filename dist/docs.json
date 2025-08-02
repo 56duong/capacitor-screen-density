@@ -1,0 +1,25 @@
+{
+  "api": {
+    "name": "ScreenDensityPlugin",
+    "slug": "screendensityplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "getDensity",
+        "signature": "() => Promise<{ density: number; }>",
+        "parameters": [],
+        "returns": "Promise<{ density: number; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "getdensity"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
