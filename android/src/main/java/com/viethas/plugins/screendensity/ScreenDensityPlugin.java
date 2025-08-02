@@ -6,6 +6,8 @@ import android.content.Context;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.annotation.CapacitorPlugin;
 import com.getcapacitor.Plugin;
+import com.getcapacitor.PluginMethod;
+import com.getcapacitor.JSObject;
 
 @CapacitorPlugin(name = "ScreenDensity")
 public class ScreenDensityPlugin extends Plugin {
